@@ -1,0 +1,88 @@
+/* sf-vue-animated-cursor */
+:root{
+  --click-default-scale: 2;
+  --click-hover-scale: 2;
+  --hover-scale: 3;
+  --hover-opacity: 0.5;
+}
+
+.sf-vue-animated-cursor {
+    position: fixed !important;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1000;
+
+  /* animations */
+
+    // default click animations
+    &.click--default-animation {
+      -webkit-animation: click-animation 0.3s ease;
+              animation: click-animation 0.3s ease;
+    }
+    // click animation while hovering
+    &.click--hover-animation {
+      -webkit-animation: hover-click-animation 0.3s ease;
+              animation: hover-click-animation 0.3s ease;
+    }
+
+    // hover animation
+    &.hover--default-animation {
+      transform: scale(var(--hover-scale));
+      opacity: var(--hover-opacity);
+    }
+  }
+
+  // visibility animation
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* keyframes */
+
+  // default click animations
+  @-webkit-keyframes click-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale( var(--click-default-scale));
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes click-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale( var(--click-default-scale));
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  // click animation while hovering
+  @-webkit-keyframes hover-click-animation {
+    0% {
+      transform: scale(var(--hover-scale));
+    }
+    50% {
+      transform: scale(var(--click-hover-scale));
+    }
+    100% {
+      transform: scale(var(--hover-scale));
+    }
+  }
+  @keyframes hover-click-animation {
+    0% {
+      transform: scale(var(--hover-scale));
+    }
+    50% {
+      transform: scale(var(--click-hover-scale));
+    }
+    100% {
+      transform: scale(var(--hover-scale));
+    }
+  }

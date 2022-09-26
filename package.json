@@ -1,0 +1,49 @@
+{
+  "name": "sf-vue-animated-cursor",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Parameterizable animated cursor for vue 3.",
+  "author": {
+    "name": "Schön Ferenc",
+    "email": "schonferenc.dev@gmail.com"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "rm -rf ./dist && vue-cli-service build",
+    "build-library": "rm -rf ./dist && vue-cli-service build --target lib --name sf-vue-animated-cursor ./src/install.js",
+    "build-rollup": "rm -rf ./dist && rollup -c"
+  },
+  "main": "./dist/sf-vue-animated-cursor.common.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "sass": "1.32.12",
+    "sass-loader": "^10.1.0",
+    "vue-cli-plugin-pug": "~2.0.0",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^14.0.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "core-js": "^3.6.5",
+    "vue-global-api": "^0.4.1",
+    "vue-ui-preloader": "^1.2.1"
+  },
+  "bugs": "https://github.com/schonferenc/sf-vue-animated-cursor/issues",
+  "keywords": [
+    "sf",
+    "cursor",
+    "animated",
+    "vue"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/schonferenc/sf-vue-animated-cursor"
+}
